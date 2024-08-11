@@ -50,7 +50,7 @@ window.onload = function () {
           if (children.length > 0) {
             dropZone.hide();
           }
-
+          hwv.model.setPMIColorOverride(false);
           let opMngr = hwv.operatorManager;
           //opMngr.remove(Communicator.OperatorId.Select)
           // Register add'l ops
@@ -101,7 +101,7 @@ window.onload = function () {
       var rootNode = model.getAbsoluteRootNode();
       model.loadSubtreeFromScsFile(rootNode, modelName).then(() => {
         //hwv.view.setBackgroundColor(new Communicator.Color(228, 245, 245), new Communicator.Color(26, 86, 204));
-hwv.model.setPMIColorOverride(false);
+        hwv.model.setPMIColorOverride(false);
       })
     });
   })
